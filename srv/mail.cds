@@ -1,7 +1,7 @@
 service MailService {
 //Option 1 entity    
-    action sendmail();
+    // action sendmail();
 //Option 2 entity    
-    // function sendMail() returns String; 
+    function sendMail() returns String; 
 }
 
