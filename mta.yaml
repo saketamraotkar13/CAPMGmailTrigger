@@ -24,12 +24,12 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      - name: emailcapm-auth
-      - name: emailcapm-connectivity
-      - name: emailcapm-destination
+      - name: mail-xsuaa
+      - name: mail-connectivity
+      - name: mail-destination
 
 resources:
-  - name: emailcapm-auth
+  - name: mail-xsuaa
     type: org.cloudfoundry.managed-service
     parameters:
       service: xsuaa
@@ -38,12 +38,12 @@ resources:
       config:
         xsappname: emailcapm-${org}-${space}
         tenant-mode: dedicated
-  - name: emailcapm-connectivity
+  - name: mail-connectivity
     type: org.cloudfoundry.managed-service
     parameters:
       service: connectivity
       service-plan: lite
-  - name: emailcapm-destination
+  - name: mail-destination
     type: org.cloudfoundry.managed-service
     parameters:
       service: destination
