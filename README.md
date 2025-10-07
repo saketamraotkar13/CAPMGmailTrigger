@@ -33,22 +33,25 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - create detintaion for gmail/email with below blog:
     property | Property Value
     --------|---------
-    -Name | mail_destination
-    -Type | MAIL
-    -proxy Type | Internet
-    -Authentication | BasicAuthentication
-    -user | <emailid of gmail>
-    -Password | <16 digit gmail App password key>
+    Name | mail_destination
+    Type | MAIL
+    proxy Type | Internet
+    Authentication | BasicAuthentication
+    user | <emailid of gmail>
+    Password | <16 digit gmail App password key>
+
 - additional properties:
-    -mail.smtp.from=<enter e-mail address to send email from here>
-    -mail.smtp.ssl.checkserveridentity=true
-    -mail.smtp.starttls.enable=true
-    -mail.smtp.starttls.required=true
-    -mail.smtp.host=smtp.gmail.com
-    -mail.smtp.port=587
-    -mail.transport.protocol=smtp
-    -mail.smtp.ssl.trust=*
-    -mail.smtp.ssl.enable:false
+    property | Property Value
+    --------|---------
+    mail.smtp.from | <enter e-mail address to send email from here>
+    mail.smtp.ssl.checkserveridentity | true
+    mail.smtp.starttls.enable | true
+    mail.smtp.starttls.required | true
+    mail.smtp.host | smtp.gmail.com
+    mail.smtp.port | 587
+    mail.transport.protocol | smtp
+    mail.smtp.ssl.trust | *
+    mail.smtp.ssl.enable | false
 
 -- expose function/action in srv/mail.cds file
 -- implement function/action in srv/mail.js file
