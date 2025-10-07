@@ -60,6 +60,10 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 
 --> e.g. cds bind -2  mail-xsuaa:mail-xsuaa-key
 
+- run app in hybrid mode before deploying
+
+--> cds watch --profile hybrid
+
 test locally from test.http file:
 ### // Check mail Option 1
 POST http://localhost:4004/odata/v4/mail/sendmail
