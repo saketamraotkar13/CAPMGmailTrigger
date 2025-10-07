@@ -37,7 +37,7 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
     Type | MAIL
     proxy Type | Internet
     Authentication | BasicAuthentication
-    user | <emailid of gmail>
+    user | emailid of gmail
     Password | <16 digit gmail App password key>
 
 - additional properties:
