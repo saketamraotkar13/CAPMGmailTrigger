@@ -1,0 +1,39 @@
+{
+  "name": "emailcapm",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "dependencies": {
+    "@sap-cloud-sdk/connectivity": "^4.1.2",
+    "@sap-cloud-sdk/mail-client": "^3.24.0",
+    "@sap/cds": "^9",
+    "@sap/xsenv": "^3.4.0",
+    "@sap/xssec": "^4.10.0",
+    "express": "^4",
+    "passport": "^0.7.0",
+    "sap-cf-mailer": "^0.0.5"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2",
+    "@sap/cds-dk": "^9"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "private": true,
+  "cds": {
+    "[hybrid]": {
+      "auth": {
+        "kind": "xsuaa"
+      },
+      "mailService": {
+        "kind": "rest",
+        "credentials": {
+          "destination": "mail_destination",
+          "forwardAuthToken": true
+        }
+      },
+      "connectivity": true,
+      "destinations": true
+    }
+  }
+}
