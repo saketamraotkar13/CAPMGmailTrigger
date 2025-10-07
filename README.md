@@ -43,7 +43,7 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - additional properties:
     property | Property Value
     --------|---------
-    mail.smtp.from | <enter e-mail address to send email from here>
+    mail.smtp.from | enter e-mail address to send email from here
     mail.smtp.ssl.checkserveridentity | true
     mail.smtp.starttls.enable | true
     mail.smtp.starttls.required | true
