@@ -63,12 +63,14 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 test locally from test.http file:
 ### // Check mail Option 1
 POST http://localhost:4004/odata/v4/mail/sendmail
+
 Content-Type: application/json
 
 {}
 
 ### //send mail Option 2
 GET http://localhost:4004/odata/v4/mail/sendMail 
+
 Content-Type: application/json
 
 {}
