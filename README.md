@@ -31,12 +31,13 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - create connectivity service instance with plan lite - mail-connectivity, mail-connectivity-key
 - get Application password for Gmail refer below blog
 - create detintaion for gmail/email with below blog:
-    -Name=mail_destination
-    -Type=MAIL
-    -proxy Type=Internet
-    -Authentication=BasicAuthentication
-    -user=<emailid of gmail>
-    -Password=<16 digit gmail App password key>
+    property | Property Value
+    -Name | mail_destination
+    -Type | MAIL
+    -proxy Type | Internet
+    -Authentication | BasicAuthentication
+    -user | <emailid of gmail>
+    -Password | <16 digit gmail App password key>
 - additional properties:
     -mail.smtp.from=<enter e-mail address to send email from here>
     -mail.smtp.ssl.checkserveridentity=true
