@@ -53,10 +53,10 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
     mail.smtp.ssl.trust | *
     mail.smtp.ssl.enable | false
 
--expose function/action in srv/mail.cds file
--implement function/action in srv/mail.js file
--bind all 3 services by usning below command
---> cds bind -2 <serviceName>:<serviceName-key>
+- expose function/action in srv/mail.cds file
+- implement function/action in srv/mail.js file
+- bind all 3 services by usning below command
+- cds bind -2 <serviceName>:<serviceName-key>
 --> e.g. cds bind -2  mail-xsuaa:mail-xsuaa-key
 
 test locally from test.http file:
