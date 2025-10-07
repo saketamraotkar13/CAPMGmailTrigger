@@ -32,6 +32,7 @@ Learn more at https://cap.cloud.sap/docs/get-started/.
 - get Application password for Gmail refer below blog
 - create detintaion for gmail/email with below blog:
     property | Property Value
+    --------|---------
     -Name | mail_destination
     -Type | MAIL
     -proxy Type | Internet
