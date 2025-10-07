@@ -76,7 +76,8 @@ Content-Type: application/json
 {}
 
 - reference: 
-Mail Destination: https://help.sap.com/docs/intelligent-robotic-process-automation/factory-user-guide/configure-smtp-mail-destination
+
+- Mail Destination: https://help.sap.com/docs/intelligent-robotic-process-automation/factory-user-guide/configure-smtp-mail-destination
 
 - CAPM Trigger Email Option 1:
 
@@ -91,6 +92,7 @@ https://community.sap.com/t5/technology-blog-posts-by-members/sending-emails-fro
 https://help.sap.com/docs/intelligent-robotic-process-automation/factory-user-guide/configure-smtp-mail-destination
 
 - How to get Gmail App Password:
+
 https://support.google.com/mail/thread/205453566/how-to-generate-an-app-password?hl=en
 
 OR
