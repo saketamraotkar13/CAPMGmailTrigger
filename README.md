@@ -79,12 +79,15 @@ Content-Type: application/json
 Mail Destination: https://help.sap.com/docs/intelligent-robotic-process-automation/factory-user-guide/configure-smtp-mail-destination
 
 - CAPM Trigger Email Option 1:
+
 https://community.sap.com/t5/technology-blog-posts-by-members/connecting-on-premise-mail-destination-and-sending-email-using-sap-cloud/ba-p/13560956
 
 - CAPM Trigger Email Option 2:  
+
 https://community.sap.com/t5/technology-blog-posts-by-members/sending-emails-from-sap-cap-applications-with-any-smtp-provider/ba-p/14179608
 
 - SAP BTP MAIL Destination:
+
 https://help.sap.com/docs/intelligent-robotic-process-automation/factory-user-guide/configure-smtp-mail-destination
 
 - How to get Gmail App Password:
