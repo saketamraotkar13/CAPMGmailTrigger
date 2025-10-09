@@ -1,50 +1,52 @@
-_schema-version: 3.3.0
+_schema-version: "3.3"
 ID: emailcapm
 version: 1.0.0
 description: "A simple CAP project."
+
 parameters:
-  enable-parallel-deployments: true
+      enable-parallel-deployments: true
+
 build-parameters:
-  before-all:
-    - builder: custom
-      commands:
-        - npm ci
-        - npx cds build --production
+      before-all:
+            - builder: custom
+              commands:
+                    - npm ci
+                    - npx cds build --production
+
 modules:
-  - name: emailcapm-srv
-    type: nodejs
-    path: gen/srv
-    parameters:
-      instances: 1
-      buildpack: nodejs_buildpack
-    build-parameters:
-      builder: npm-ci
-    provides:
-      - name: srv-api # required by consumers of CAP services (e.g. approuter)
-        properties:
-          srv-url: ${default-url}
-    requires:
-      - name: mail-xsuaa
-      - name: mail-connectivity
-      - name: mail-destination
+      - name: emailcapm-srv
+        type: nodejs
+        path: gen/srv
+        parameters:
+              instances: 1
+              buildpack: nodejs_buildpack
+        build-parameters:
+              builder: npm-ci
+        provides:
+              - name: srv-api
+                properties:
+                      srv-url: ${default-url}
+        requires:
+              - name: mail-xsuaa
+              - name: mail-connectivity
+              - name: mail-destination
 
 resources:
-  - name: mail-xsuaa
-    type: org.cloudfoundry.managed-service
-    parameters:
-      service: xsuaa
-      service-plan: application
-      path: ./xs-security.json
-      config:
-        xsappname: emailcapm-${org}-${space}
-        tenant-mode: dedicated
-  - name: mail-connectivity
-    type: org.cloudfoundry.managed-service
-    parameters:
-      service: connectivity
-      service-plan: lite
-  - name: mail-destination
-    type: org.cloudfoundry.managed-service
-    parameters:
-      service: destination
-      service-plan: lite
+      - name: mail-xsuaa
+        type: org.cloudfoundry.managed-service
+        parameters:
+              service: xsuaa
+              service-plan: application
+              config:
+                    xsappname: mail-xsuaa-${org}-${space}
+                    tenant-mode: dedicated
+      - name: mail-connectivity
+        type: org.cloudfoundry.managed-service
+        parameters:
+              service: connectivity
+              service-plan: lite
+      - name: mail-destination
+        type: org.cloudfoundry.managed-service
+        parameters:
+              service: destination
+              service-plan: lite
