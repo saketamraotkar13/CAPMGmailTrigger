@@ -8,6 +8,7 @@
     "@sap/cds": "^9",
     "@sap/xsenv": "^3.4.0",
     "@sap/xssec": "^4.10.0",
+    "exceljs": "^4.4.0",
     "express": "^4",
     "passport": "^0.7.0",
     "sap-cf-mailer": "^0.0.5"
@@ -35,7 +36,7 @@
       "connectivity": true,
       "destinations": true
     },
-      "server": {
+    "server": {
       "index": true
     }
   }
