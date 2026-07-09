@@ -97,3 +97,6 @@ https://help.sap.com/docs/intelligent-robotic-process-automation/factory-user-gu
 https://support.google.com/mail/thread/205453566/how-to-generate-an-app-password?hl=en
 
 https://itsupport.umd.edu/itsupport?id=kb_article_view&sysparm_article=KB0015112
+
+### for SAP BTP Job Scheduling
+https://community.sap.com/t5/technology-blog-posts-by-members/sap-btp-cloud-foundry-job-scheduling-for-cap-based-project/ba-p/13516285
