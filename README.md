@@ -95,7 +95,4 @@ https://help.sap.com/docs/intelligent-robotic-process-automation/factory-user-gu
 - How to get Gmail App Password:
 
 https://support.google.com/mail/thread/205453566/how-to-generate-an-app-password?hl=en
-
-OR
-
 https://itsupport.umd.edu/itsupport?id=kb_article_view&sysparm_article=KB0015112
