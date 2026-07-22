@@ -9,3 +9,11 @@ GET http://localhost:4004/odata/v4/mail/sendMail
 Content-Type: application/json
 
 {}
+
+###Action post
+POST http://localhost:4004/odata/v4/mail/sendMail
+Content-Type: application/json
+
+{
+    "to": "saket.amraotkar@gmail.com"
+}
