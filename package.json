@@ -6,6 +6,7 @@
     "@sap-cloud-sdk/connectivity": "^4.1.2",
     "@sap-cloud-sdk/mail-client": "^3.24.0",
     "@sap/cds": "^9",
+    "@sap/jobs-client": "^1.9.1",
     "@sap/xsenv": "^3.4.0",
     "@sap/xssec": "^4.10.0",
     "exceljs": "^4.4.0",
@@ -17,8 +18,8 @@
     "@cap-js/sqlite": "^2",
     "@sap/cds-dk": "^9",
     "cds-plugin-ui5": "^0.17.0",
-    "rimraf": "^5.0.5",
-    "mbt": "^1.2.49"
+    "mbt": "^1.2.49",
+    "rimraf": "^5.0.5"
   },
   "scripts": {
     "start": "cds-serve",

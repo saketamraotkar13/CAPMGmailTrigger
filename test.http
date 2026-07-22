@@ -4,14 +4,51 @@ Content-Type: application/json
 
 {}
 
-###send mail Option 2
+###send mail Option 2 from function
 GET http://localhost:4004/odata/v4/mail/sendMail 
 Content-Type: application/json
 
 {}
 
-###Action post
+###Action post from action 
 POST http://localhost:4004/odata/v4/mail/sendMail
+Content-Type: application/json
+
+{
+    "to": "saket.amraotkar@gmail.com"
+}
+
+
+### send mail - local (action, dynamic 'to' in body)
+POST http://localhost:4004/odata/v4/mail/sendMail
+Content-Type: application/json
+
+{
+    "to": "saket.amraotkar@gmail.com"
+}
+
+### send mail - deployed on Cloud Foundry
+# If the deployed app enforces real XSUAA auth, uncomment and set a token:
+# Authorization: Bearer {{token}}
+POST https://1f61163ftrial-dev-emailcapm-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/mail/sendMail
+Content-Type: application/json
+
+{
+    "to": "saket.amraotkar@gmail.com"
+}
+
+### trigger email job - local (creates an on-demand schedule via Job Scheduling)
+POST http://localhost:4004/odata/v4/trigger/triggerEmailJob
+Content-Type: application/json
+
+{
+    "to": "saket.amraotkar@gmail.com"
+}
+
+### trigger email job - deployed on Cloud Foundry
+# If the deployed app enforces real XSUAA auth, uncomment and set a token:
+# Authorization: Bearer {{token}}
+POST https://1f61163ftrial-dev-emailcapm-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/trigger/triggerEmailJob
 Content-Type: application/json
 
 {
