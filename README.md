@@ -98,6 +98,7 @@ https://support.google.com/mail/thread/205453566/how-to-generate-an-app-password
 
 https://itsupport.umd.edu/itsupport?id=kb_article_view&sysparm_article=KB0015112
 
+<<<<<<< HEAD
 
 ### when action implemented to pass dynamic value to service
 - Configuration in Job Scheduler:
@@ -115,3 +116,7 @@ Value: now
 Data (json): { "to": "amraotkar.saket@gmail.com" }
 Activate: enable radio button
 
+=======
+### for SAP BTP Job Scheduling
+https://community.sap.com/t5/technology-blog-posts-by-members/sap-btp-cloud-foundry-job-scheduling-for-cap-based-project/ba-p/13516285
+>>>>>>> e7ed0c0ea4c985b7971485090158a8f78ac21e34
