@@ -97,3 +97,21 @@ https://help.sap.com/docs/intelligent-robotic-process-automation/factory-user-gu
 https://support.google.com/mail/thread/205453566/how-to-generate-an-app-password?hl=en
 
 https://itsupport.umd.edu/itsupport?id=kb_article_view&sysparm_article=KB0015112
+
+
+### when action implemented to pass dynamic value to service
+- Configuration in Job Scheduler:
+Name of Job: triggeremailjob
+Description: trigger email jon
+Action: https://1f61163ftrial-dev-emailcapm-srv.cfapps.us10-001.hana.ondemand.com/odata/v4/mail/sendMail
+HTTP Method: POST (for action)
+Active: enable radio button
+rest all fields are empty
+
+- Configure Schedule
+Description: testSchedule
+Pattern: One Time
+Value: now
+Data (json): { "to": "amraotkar.saket@gmail.com" }
+Activate: enable radio button
+
