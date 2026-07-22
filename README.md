@@ -120,4 +120,4 @@ Activate: enable radio button
 ### for SAP BTP Job Scheduling
 https://community.sap.com/t5/technology-blog-posts-by-members/sap-btp-cloud-foundry-job-scheduling-for-cap-based-project/ba-p/13516285
 
-### from code job id 7670720 in trigger.js file make sure to match from Job ID from job.
+### from code job id 7670720 in trigger.js file make sure to match from Job ID from job scheduler service instance.
