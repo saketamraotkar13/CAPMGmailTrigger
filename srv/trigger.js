@@ -1,9 +1,9 @@
 const cds = require('@sap/cds');
 const JobSchedulerClient = require('@sap/jobs-client');
 
-// TODO: replace with the numeric jobId of 'triggeremailjob'
-// (find it via the Job Scheduling dashboard or GET /scheduler/jobs)
-const TRIGGER_EMAIL_JOB_ID = '7670720';
+// The job is looked up by name at runtime instead of hardcoding its numeric ID,
+// so this code doesn't need edits when redeployed to a different subaccount.
+const TRIGGER_EMAIL_JOB_NAME = 'triggeremailjob';
 
 module.exports = cds.service.impl(function () {
 
@@ -30,10 +30,25 @@ module.exports = cds.service.impl(function () {
                 url: jobSchedulerCreds.url
             });
 
+            // Look up the job by name to get its current jobId
+            const job = await new Promise((resolve, reject) => {
+                scheduler.fetchJob(
+                    { name: TRIGGER_EMAIL_JOB_NAME },
+                    (err, res) => err ? reject(err) : resolve(res)
+                );
+            });
+
+            const jobId = job.jobId || job._id;
+
+            if (!jobId) {
+                req.error(500, `Could not find job '${TRIGGER_EMAIL_JOB_NAME}'`);
+                return;
+            }
+
             const result = await new Promise((resolve, reject) => {
                 scheduler.createJobSchedule(
                     {
-                        jobId: TRIGGER_EMAIL_JOB_ID,
+                        jobId,
                         schedule: {
                             active: 'true',
                             description: `on-demand trigger for ${to}`,

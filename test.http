@@ -42,7 +42,7 @@ POST http://localhost:4004/odata/v4/trigger/triggerEmailJob
 Content-Type: application/json
 
 {
-    "to": "saket.amraotkar@gmail.com"
+    "to": "amraotkar.saket@gmail.com"
 }
 
 ### trigger email job - deployed on Cloud Foundry
